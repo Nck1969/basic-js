@@ -5,7 +5,7 @@ const HALF_LIFE_PERIOD= 5730;
 
 module.exports = function dateSample(sampleActivity) {
   let regex = /[0-9]/;
-  if (sampleActivity == 0) return false;
+  if (sampleActivity == '0') return false;
   if(typeof(sampleActivity) != 'string') return false;
 if ( sampleActivity.search(regex))  return false;
 
