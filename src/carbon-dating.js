@@ -4,10 +4,10 @@ const MODERN_ACTIVITY= 15;
 const HALF_LIFE_PERIOD= 5730;
 
 module.exports = function dateSample(sampleActivity) {
-  let regex = /[0-9]/;
-  if (sampleActivity == '0') return false;
+  let regex = /[A-Za-z\W]/;
+  if (sampleActivity == '0' || sampleActivity == '') return false;
   if(typeof(sampleActivity) != 'string') return false;
-if ( sampleActivity.search(regex))  return false;
+if ( sampleActivity.search(regex) !=  -1)  return false;
 
   sampleActivity = Number(sampleActivity);
 
