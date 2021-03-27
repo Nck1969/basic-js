@@ -1,16 +1,15 @@
 const CustomError = require("../extensions/custom-error");
 
- let z = 0;
+class VigenereCipheringMachine {
+  constructor(type) {
+  this.type = type;
+
+  let z = 0;
   let citpher = '';
   let str = '';
-  
-
-class VigenereCipheringMachine{
-  constructor(type) {
-    this.type = type;
-  }
-  encrypt(message, key) {
-    message = message.toLowerCase();
+   
+ encrypt(message, key) {
+       message = message.toLowerCase();
     key = key.toLowerCase();
 
     for( let i = 0; i < message.length; i++){
@@ -28,11 +27,11 @@ class VigenereCipheringMachine{
 
     if(this.type === false) {
       return citpher.split('').reverse().join('');
-    }
-    return citpher;
+      return citpher;
+
   }    
   decrypt(message, key) {
-    message = message.toLowerCase();
+        message = message.toLowerCase();
     key = key.toLowerCase();
    
     for( let i = 0; i < message.length; i++){
