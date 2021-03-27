@@ -10,6 +10,9 @@ class VigenereCipheringMachine{
     this.type = type;
   }
   encrypt(message, key) {
+      if(!message || !key) {
+      throw new Error()
+    }
     message = message.toLowerCase();
     key = key.toLowerCase();
 
@@ -33,6 +36,9 @@ class VigenereCipheringMachine{
     }
   }
   decrypt(message, key) {
+      if(!message || !key) {
+      throw new Error()
+    }
     message = message.toLowerCase();
     key = key.toLowerCase();
    
