@@ -28,12 +28,12 @@ class VigenereCipheringMachine{
         str = String.fromCharCode(((message[i].charCodeAt(0) + key[z].charCodeAt(0) - 194) % 26) + 97);
         citpher = citpher.concat(str)
         z++;
-
+    }   
+      citpher = citpher.toUpperCase();
       if(this.type === false) {
         return citpher.split('').reverse().join('');
       }
       return citpher;
-    }
   }
   decrypt(message, key) {
       if(!message || !key) {
@@ -59,12 +59,12 @@ class VigenereCipheringMachine{
         citpher = citpher.concat(str)  
         }
         z++;
-   
+    }
+      citpher = citpher.toUpperCase();
       if(this.type === false) {
         return citpher.split('').reverse().join('');
       }
       return citpher;
-    }
   }
 }
 
